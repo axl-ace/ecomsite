@@ -2,32 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	color: #000;
+	background-color: #fff;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.paddingX {
+	@apply 2xl:px-[160px] xl:px-[80px] px-[16px];
+}
+
+.Nofill {
+	@apply border border-whites-95 px-[18px] py-3 regularfont rounded-full;
+}
+
+.yesfill {
+	@apply bg-whites-95 px-[18px] py-3 regularfont rounded-full border border-transparent;
+}
+
+.regularfont {
+	@apply font-medium text-sm;
+}
+
+.heading1 {
+	@apply text-gray-10 2xl:text-[48px] font-semibold sm:text-[38px] text-[28px];
+}
+
+.paragraph1 {
+	@apply sm:text-base font-normal text-gray-40 text-sm;
+}
+
+.supstatis {
+	@apply sm:text-base lg:text-lg font-normal text-gray-40 text-sm;
+}
+
+.heading4 {
+	@apply text-black sm:text-lg font-semibold text-base;
+}
+
+
+
+.paragraph2 {
+	@apply text-gray-40 font-medium text-sm;
+}
+
+.yellowButton {
+    @apply flex items-center gap-[10px] font-medium border border-transparent text-sm 2xl:text-lg px-6 py-[10px] bg-yellow-50 rounded-[50px] w-full xl:w-max flex-row justify-center
+}
+
+.nofillButton {
+    @apply flex items-center gap-[10px] font-medium text-sm 2xl:text-lg px-6 py-[10px] border border-whites-95 rounded-[50px] w-full xl:w-max flex-row justify-center
+}
+
+.faqCategories {
+    @apply font-medium 2xl:text-[20px] text-base text-gray-60
+}
+
+.faqActive {
+    @apply font-semibold 2xl:text-[20px] text-base text-gray-10
+}
+
+.heading5 {
+    @apply text-base text-gray-10 font-medium
 }
